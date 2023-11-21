@@ -52,7 +52,7 @@ footer {
                     left: -2.5em;
                     display: block;
                     content: "";
-                    @include backgroundImg("../../img/aspas.png", "none");
+                    @include backgroundImg("../img/aspas.png", "none");
                     width: 30px;
                     height: 30px;
                 }
@@ -63,7 +63,7 @@ footer {
                     right: -2.5em;
                     display: block;
                     content: "";
-                    @include backgroundImg("../../img/aspas.png", "none");
+                    @include backgroundImg("../img/aspas.png", "none");
                     width: 30px;
                     height: 30px;
                     transform: rotateY(180deg);
@@ -134,8 +134,8 @@ footer {
 
                 .container_footer-inscricao {
                     position: relative;
-                    height: 80vh;
                     width: 30vw;
+                    padding-bottom: 2em;
                     background: $cor-terciaria;
                     border-radius: 50px 0;
                     border: 2px solid $cor-primaria;
@@ -165,7 +165,7 @@ footer {
 
                         form {
                             display: flex;
-
+                            gap: 32px;
                             div {
                                 width: 100%;
                                 display: flex;

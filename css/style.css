@@ -428,7 +428,7 @@ footer .footer_content .footer_center .frase_motivacional ::before {
   left: -2.5em;
   display: block;
   content: "";
-  background: url("../../img/aspas.png");
+  background: url("../img/aspas.png");
   background-color: "none";
   background-size: contain;
   background-position: center;
@@ -442,7 +442,7 @@ footer .footer_content .footer_center .frase_motivacional ::after {
   right: -2.5em;
   display: block;
   content: "";
-  background: url("../../img/aspas.png");
+  background: url("../img/aspas.png");
   background-color: "none";
   background-size: contain;
   background-position: center;
@@ -508,8 +508,8 @@ footer .footer_content .inscricao_footer .footer_form {
 }
 footer .footer_content .inscricao_footer .footer_form .container_footer-inscricao {
   position: relative;
-  height: 80vh;
   width: 30vw;
+  padding-bottom: 2em;
   background: #CEDEBD;
   border-radius: 50px 0;
   border: 2px solid #435334;
@@ -537,6 +537,7 @@ footer .footer_content .inscricao_footer .footer_form .container_footer-inscrica
 }
 footer .footer_content .inscricao_footer .footer_form .container_footer-inscricao .container_footer-form form {
   display: flex;
+  gap: 32px;
 }
 footer .footer_content .inscricao_footer .footer_form .container_footer-inscricao .container_footer-form form div {
   width: 100%;
