@@ -375,6 +375,7 @@ html ::selection {
 footer {
   display: flex;
   flex-direction: column;
+  gap: 16px;
   margin-top: 5vh;
   background: #CEDEBD;
 }
@@ -390,7 +391,7 @@ footer .footer_content {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 3em 2em 2em;
+  padding: 3em 1em 2em;
 }
 footer .footer_content .logo_footer {
   display: flex;
@@ -415,8 +416,8 @@ footer .footer_content .footer_center {
 }
 footer .footer_content .footer_center .frase_motivacional {
   position: relative;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: 600px;
+  text-align: center;
   line-height: 1.5em;
   letter-spacing: 1px;
   font-weight: 500;
@@ -631,7 +632,7 @@ footer .footer_content .inscricao_footer .footer_form .mensagem_sucesso img {
 }
 footer .footer_content .inscricao_footer .footer_form .mensagem_sucesso p {
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.05em;
 }
 footer .footer_content .inscricao_footer .footer_form .ativo {
   opacity: 1;

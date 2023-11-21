@@ -8,7 +8,7 @@ footer {
 
     display: flex;
     flex-direction: column;
-
+    gap: 16px;
     margin-top: 5vh;
     background: $cor-terciaria;
 
@@ -16,7 +16,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        padding: 3em 2em 2em;
+        padding: 3em 1em 2em;
 
         .logo_footer {
             display: flex;
@@ -40,7 +40,8 @@ footer {
             transform: translateY(25px);
             .frase_motivacional {
                 position: relative;
-                max-width: fit-content;
+                max-width: 600px;
+                text-align: center;
                 line-height: 1.5em;
                 letter-spacing: 1px;
                 font-weight: 500;
