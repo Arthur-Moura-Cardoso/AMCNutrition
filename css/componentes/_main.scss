@@ -1,0 +1,170 @@
+@import '../abstract/base';
+
+@mixin erro() {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: $cor-erro;
+}
+
+@mixin label() {
+    font-size: 1.05em;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+}
+
+@mixin backgroundImg($url_imagem, $cor_fundo) {
+    background: url($url_imagem);
+    background-color: $cor_fundo;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    .container {
+        margin: 12vh 0;
+        h2 {
+            font-size: 2.25em;
+            font-weight: 500;
+            margin: 0 10vw 8vh;
+            padding-bottom: 24px;
+            border-bottom: 2px solid $cor-primaria;
+        }
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .filtro {
+            display: flex;
+            gap: 6px;
+            flex-direction: column;
+            label {
+                @include label();
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    font-weight: 700;
+                    font-size: .9em;
+                    color: $cor_quaternaria;
+                    background: $cor-primaria;
+                    padding: 4px 6px;
+                    border: 1px solid $cor-primaria;
+                    border-radius: 25px;
+                    position: relative;
+                    .text_balloon {
+                        position: absolute;
+                        font-size: 0px;
+                        top: -115px;
+                        left: 60px;
+                        width: 10px;
+                        height: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all .25s ease-in;
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            bottom: 10px;
+                            right: 0px;
+                            transition: all .25s ease-in;
+
+                        }
+                    }
+                    &:hover {
+                        .text_balloon
+                            {
+                            position: absolute;
+                            top: -135px;
+                            left: -40px;
+                            width: 200px;
+                            height: 90px;
+                            padding: 0px;
+                            padding: 10px;
+                            background: $cor-segundaria;
+                            border-radius: 10px;
+                            font-size: 1em;
+                            
+                            &::after{
+                                    content: '';
+                                    position: absolute;
+                                    border-style: solid;
+                                    border-width: 20px 20px 0;
+                                    border-color: $cor-segundaria transparent;
+                                    display: block;
+                                    width: 0;
+                                    z-index: 1;
+                                    bottom: -20px;
+                                    left: 31px;
+                                }
+                        }
+                    }
+                }
+            }
+            input {
+                width: 230px;
+                padding: 4px 8px;
+                border: 1px solid $cor-primaria;
+                border-radius: 5px;
+                text-align: center;
+                color: $cor-primaria;
+            }
+        }
+        .editar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            label {
+                @include label()
+            }
+            input {
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                accent-color: $cor-segundaria;
+            }
+        }
+        .column {
+            gap: 8px;
+            flex-direction: column;
+            .erro-ajax {
+                @include erro();
+                cursor: default;
+            }
+            
+        }
+        .botao {
+            background: $cor-terciaria;
+            width: 500px;
+            padding: 12px;
+            font-size: 1.25em;
+            border: 2px solid $cor-primaria;
+            border-radius: 24px;
+            outline: none;
+            cursor: pointer;
+            transition: background .2s ease-in-out;
+            &:hover {
+                background: $cor-terciaria_hover;
+            }
+            &:active {
+                scale: 0.95;
+            }
+        }
+
+        #titulo-form {
+            margin-bottom: 5vh;
+        }
+
+        #mensagens-erro {
+            @include erro();
+            @include marginLados();
+            li {
+                margin-bottom: 6px;
+            }
+        }
+    }
+}

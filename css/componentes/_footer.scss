@@ -1,0 +1,291 @@
+@import '../abstract/base';
+
+footer {
+    ::selection {
+        background-color: $cor-primaria;
+        color: $cor-terciaria;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5vh;
+    background: $cor-terciaria;
+
+    .footer_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 3em 2em 2em;
+
+        .logo_footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            h1 {
+                @include titulo($cor-primaria);
+            }
+
+            .img_logo-footer {
+                width: 40px;
+            }
+        }
+
+        .footer_center {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            gap: 15px;
+            transform: translateY(25px);
+            .frase_motivacional {
+                position: relative;
+                max-width: fit-content;
+                line-height: 1.5em;
+                letter-spacing: 1px;
+                font-weight: 500;
+                cursor: pointer;
+
+                ::before {
+                    position: absolute;
+                    bottom: 2em;
+                    left: -2.5em;
+                    display: block;
+                    content: "";
+                    @include backgroundImg("../../img/aspas.png", "none");
+                    width: 30px;
+                    height: 30px;
+                }
+
+                ::after {
+                    position: absolute;
+                    bottom: 2em;
+                    right: -2.5em;
+                    display: block;
+                    content: "";
+                    @include backgroundImg("../../img/aspas.png", "none");
+                    width: 30px;
+                    height: 30px;
+                    transform: rotateY(180deg);
+                }
+            }
+
+            .marca {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 4px;
+                border-top: 2px solid $cor-primaria;
+                padding-top: 15px;
+                padding-bottom: 1em;
+                line-height: 1.2em;
+                letter-spacing: .8px;
+                font-weight: 600;
+
+                img {
+                    width: 35px;
+                }
+            }
+        }
+
+        .inscricao_footer {
+            font-size: 1.15em;
+            text-align: center;
+
+            .bold {
+                font-weight: 700;
+            }
+
+            button {
+                padding: 6px 12px;
+                background: $cor-primaria;
+                margin-top: 8px;
+                cursor: pointer;
+                border: 2px solid $cor-primaria;
+                border-radius: 24px;
+                color: $cor-quaternaria;
+                font-weight: 600;
+                transition: background 0.2s ease-in;
+
+                &:hover {
+                    background-color: $cor-segundaria;
+                    color: $cor-primaria;
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+
+            .footer_form {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 0;
+                overflow: hidden;
+                background: $dark_blur;
+                position: fixed;
+                top: 0;
+                right: 0;
+                text-align: initial;
+                transition: .5s ease-in;
+
+                .container_footer-inscricao {
+                    position: relative;
+                    height: 80vh;
+                    width: 30vw;
+                    background: $cor-terciaria;
+                    border-radius: 50px 0;
+                    border: 2px solid $cor-primaria;
+
+                    .botao-fechar {
+                        padding: 0;
+                        background: none;
+                        border: none;
+                        color: $cor-primaria;
+                        font-size: 2em;
+                        display: block;
+                        position: absolute;
+                        right: 20px;
+                        top: 10px;
+                    }
+
+                    .container_footer-form {
+                        display: block;
+
+                        h2 {
+                            margin-top: 1em;
+                            text-align: center;
+                            font-size: 2em;
+                            font-weight: 700;
+                            letter-spacing: 3px;
+                        }
+
+                        form {
+                            display: flex;
+
+                            div {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+                                margin-left: 10%;
+
+                                label {
+                                    margin-left: 5px;
+                                    font-weight: 700;
+                                }
+
+                                input {
+                                    background: none;
+                                    width: 85%;
+                                    padding: 6px 5px;
+                                    border: none;
+                                    outline: none;
+                                    border-bottom: 2px solid $cor-primaria;
+                                    color: $cor-primaria;
+                                    font-weight: 500;
+                                }
+
+                                input[type=number]::-webkit-inner-spin-button,
+                                input[type=number]::-webkit-outer-spin-button {
+                                    -webkit-appearance: none;
+                                }
+                            }
+
+                            .checkbox_footer {
+                                flex-direction: row;
+                                margin: 0;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 0;
+
+                                input {
+                                    cursor: pointer;
+                                    width: 20px;
+                                    height: 20px;
+                                    accent-color: $cor-primaria;
+                                }
+
+                                label {
+                                    width: 70%;
+                                    font-size: 0.8em;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .mensagem_erro {
+                                color: $cor-erro;
+                                font-weight: 600;
+                            }
+
+                            button {
+
+                                margin-top: 0;
+                                letter-spacing: 1.5px;
+                            }
+                        }
+                    }
+                }
+
+                .load_footer-form {
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    @include fadeIn();
+
+                    .load {
+                        width: 50px;
+                        height: 50px;
+                        border: 4px solid $cor-primaria;
+                        border-top-color: transparent;
+                        border-bottom-color: transparent;
+                        border-radius: 50%;
+                        animation: load 1.3s infinite;
+
+                        @keyframes load {
+                            to {
+                                rotate: 1.5turn;
+                            }
+                        }
+                    }
+                }
+
+                .mensagem_sucesso {
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                    height: 100%;
+                    @include fadeIn();
+
+                    img {
+                        width: 70%;
+                    }
+
+                    p {
+                        font-weight: 600;
+                        font-size: 1.2em;
+                    }
+                }
+
+                .ativo {
+                    opacity: 1;
+                    transform: scale(1) translate(0, 0);
+                    filter: blur(0px);
+                }
+            }
+
+            .ativo-form {
+                opacity: 1;
+                transform: scale(1) translate(0, 0);
+                filter: blur(0px);
+                width: 100vw;
+            }
+        }
+    }
+}

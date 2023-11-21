@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>AMC Nutrition</title>
+		<link rel="icon" href="img/icon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<h1 class="titulo">AMC Nutrição</h1>
+				<a href="https://github.com/Arthur-Moura-Cardoso/AMCNutrition" target="_blank">
+					<img src="img/github_logo.png" alt="Logo do github">
+				</a>
+			</nav>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Meus pacientes</h2>
+				<div class="flex">
+					<div class="filtro">
+						<label for="filtrar-tabela">Buscar paciente: 
+							<span>
+								?
+								<div class="text_balloon">Digite o nome do paciente que deseja encontrar.</div>							
+							</span>
+						</label>
+						<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+					</div>
+
+					<div class="editar">
+						<label for="editar">Editar pacientes</label>
+						<input type="checkbox" id="editar">
+					</div>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
+							<th class="icon_tabela"></th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="paciente">
+							<td class="info-nome">Matías Romero</td>
+							<td class="info-peso">80</td>
+							<td class="info-altura">1.86</td>
+							<td class="info-gordura">18</td>
+							<td class="info-imc"></td>
+							<td class="limpar-tr"></td>
+						</tr>
+
+						<tr class="paciente">
+							<td class="info-nome">Gabriel Otávio</td>
+							<td class="info-peso">60</td>
+							<td class="info-altura">1.68</td>
+							<td class="info-gordura">28</td>
+							<td class="info-imc"></td>
+							<td class="limpar-tr"></td>
+						</tr>
+
+						<tr class="paciente">
+							<td class="info-nome">Jessica Souza</td>
+							<td class="info-peso">54</td>
+							<td class="info-altura">1.64</td>
+							<td class="info-gordura">19</td>
+							<td class="info-imc"></td>
+							<td class="limpar-tr"></td>
+						</tr>
+
+						<tr class="paciente">
+							<td class="info-nome">Livia Oliveria</td>
+							<td class="info-peso">55</td>
+							<td class="info-altura">1.55</td>
+							<td class="info-gordura">20</td>
+							<td class="info-imc"></td>
+							<td class="limpar-tr"></td>
+						</tr>
+						<tr class="paciente">
+							<td class="info-nome">Joseph Seed</td>
+							<td class="info-peso">87</td>
+							<td class="info-altura">1.80</td>
+							<td class="info-gordura">8</td>
+							<td class="info-imc"></td>
+							<td class="limpar-tr"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="flex column">
+					<button id="buscar-paciente" class="botao">Adicionar Pacientes</button>
+				</div>
+
+			</section>
+
+			<section class="container">
+				<h2 id="titulo-form">Adicionar novo paciente</h2>
+					<ul id="mensagens-erro"></ul>
+					<form id="form-adiciona" autocomplete="off">
+						<div class="inputs">
+							<div class="grupo">
+								<label for="nome">Nome:</label>
+								<input id="nome" name="nome" type="text"
+									placeholder="digite o nome do seu paciente" class="campo">
+							</div>
+							<div class="grupo">
+								<label for="sobrenome">Sobrenome:</label>
+								<input id="sobrenome" name="sobrenome" type="text"
+									placeholder="digite o sobrenome do seu paciente" class="campo">
+							</div>
+							<div class="grupo">
+								<label for="peso">Peso:</label>
+								<input id="peso" name="peso" type="text"
+									placeholder="digite o peso do seu paciente" class="campo campo-medio">
+							</div>
+							<div class="grupo">
+								<label for="altura">Altura (CM):</label>
+								<input id="altura" name="altura" type="text"
+									placeholder="digite a altura do seu paciente" class="campo campo-medio">
+							</div>
+							<div class="grupo">
+								<label for="gordura">% de Gordura:</label>
+								<input id="gordura" type="text"
+									placeholder="digite a porcentagem de gordura do seu paciente"
+									class="campo campo-medio">
+							</div>
+						</div>
+
+						<button id="adicionar-paciente" class="botao">Adicionar</button>
+					</form>
+			</section>
+		</main>
+		<footer>
+			<div class="footer_content">
+				<div class="logo_footer">
+					<h1 class="titulo">AMC Nutrição</h1>
+					<img src="img/icon_footer.png" alt="" class="img_logo-footer">
+				</div>
+				<div class="footer_center">
+					<div class="frase_motivacional">
+						<p class="frase_motivacional-text"></p>
+					</div>
+					<div class="marca">
+						<span>Arthur Moura Cardoso</span>
+						<span>Audiconsert &#169; 2023</span>
+					<a href="https://github.com/Arthur-Moura-Cardoso">
+						<img src="img/github_logo-dark.png" alt="Logo Gith">
+					</a>
+				</div>
+				</div>
+				<div class="inscricao_footer">
+					<h2>Venha fazer parte do nosso <span class="bold">time!</span></h2>
+					<button class="botao_inscrever">Inscreva-se !</button>
+					<div class="footer_form">
+						<div class="container_footer-inscricao">
+							<div class="container_footer-form">
+								<button class="fechar botao-fechar">X</button>
+								<h2>Inscreva-se !</h2>
+								<form class="form">
+									<div>
+										<label for="nome_footer">Nome:</label>
+										<input id="nome_footer" type="text" placeholder="Insira seu Nome">
+									</div>
+
+									<div>
+										<label for="telefone_footer">Telefone:</label>
+										<input id="telefone_footer" type="tel" placeholder="Insira seu Telefone"  min="0">
+									</div>
+									
+									<div>
+										<label for="email_footer">E-mail:</label>
+										<input id="email_footer" type="email" placeholder="Insira seu E-mail">
+									</div>
+
+
+									<div class="checkbox_footer">
+										<input type="checkbox" id="notificacoes">
+										<label for="notificacoes">Aceito receber promoções e notificações pelo meu e-mail.</label>
+									</div>
+
+									<span class="mensagem_erro"></span>
+									<button class="enviar_form-footer" type="button">Enviar</button>
+								</form>
+							</div>
+							
+							<div class="load_footer-form">
+								<div class="load"></div>
+							</div>
+							
+							<div class="mensagem_sucesso">
+								<img src="img/enviado.svg" alt="">
+								<p>Seu formulário foi enviado com êxito !</p>
+								<p>Logo entraremos em contato.</p>
+								<button class="fechar"> Fechar </button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+		</footer>
+	</body>
+	<script src="js/validacoes.js"></script>
+	<script src="js/form.js"></script>
+	<script src="js/remover-paciente.js"></script>
+	<script src="js/filtra.js"></script>
+	<script src="js/adicionar-paciente.js"></script>
+	<script src="js/editar-campo.js"></script>
+	<script src="js/form-footer.js"></script>
+	<script src="js/quotes.js"></script>
+</html>

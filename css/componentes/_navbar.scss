@@ -1,0 +1,23 @@
+@import '../abstract/base';
+
+nav {
+/*     position: fixed;
+    top: 0; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: $cor-primaria;
+    padding: 1em 0;
+    h1 {
+        @include titulo($cor-quaternaria)
+    }
+    img {
+        width: 50px;
+        transition: .2s all ease-in;
+        &:hover {
+            scale: 1.05;
+            opacity: 0.85;
+        }
+    }
+}

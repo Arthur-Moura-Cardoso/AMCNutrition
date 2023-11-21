@@ -1,0 +1,19 @@
+@import './abstract/base';
+@import './componentes/navbar';
+@import './componentes/main';
+@import './componentes/tabela';
+@import './componentes/form';
+@import './componentes/footer';
+
+body {
+    font-family: $fonte;
+    color: $cor-primaria;
+}
+
+.erroForm {
+    border-color: $cor-erro !important;
+    color: $cor-erro;
+    &::placeholder {
+        color: $cor-erro;
+    } 
+}

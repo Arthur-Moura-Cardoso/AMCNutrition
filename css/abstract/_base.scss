@@ -1,0 +1,47 @@
+//fontes
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+$fonte: 'Montserrat', sans-serif;
+
+//cores
+$cor-primaria: #435334;
+$cor-segundaria: #9EB384;
+$cor-terciaria: #CEDEBD;
+$cor-terciaria_hover: #b4c0a6;
+$cor-quaternaria: #FAF1E4;
+$cor-erro: #861d1d;
+$dark_blur: rgba(0, 0, 0, 0.637);
+
+html {
+    ::selection {
+        background-color: $cor-terciaria;
+        color: $cor-primaria;
+    }
+}
+
+@mixin marginLados() {
+    margin: 0 10vw;
+}
+
+@mixin titulo($cor_text) {
+	font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: $cor_text;
+}
+
+@mixin fadeIn() {
+	transition: .8s ease-in-out;
+	opacity: 0;
+	transform: scale(0.4);
+	filter: blur(10px);
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.invisivel {
+	display: none;
+}
+

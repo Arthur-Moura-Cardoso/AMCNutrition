@@ -1,0 +1,47 @@
+@import '../abstract/base';
+
+@mixin bordaTabela() {
+    border: 2px solid $cor-primaria;
+}
+
+table {
+    margin: 5vh auto;
+    text-align: center;
+    @include bordaTabela();
+    thead {
+        tr {
+            th { 
+                @include bordaTabela();
+                padding: 8px;
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+            .icon_tabela {
+                @include backgroundImg("../img/icon.png", "none");
+                background-size: 40%;
+                min-width: 50px;
+            }
+        }
+    }
+    tbody {
+        tr{
+            td {
+                @include bordaTabela();
+                padding: 8px;
+                font-size: 1.2em;
+                font-weight: 500;
+                &:hover {
+                    background-color: $cor-segundaria;
+                }
+            }
+            .limpar-tr {
+                cursor: pointer;
+                width: 50px;
+                @include backgroundImg("../img/lixeira.png", $cor-terciaria);
+                &:hover {
+                    @include backgroundImg("../img/lixeira_hover.png", $cor-segundaria);
+                }
+            }
+        }
+    }
+}
