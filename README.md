@@ -1,3 +1,3 @@
 # AMCNutrition
 
-https://arthur-moura-cardoso.github.io/AMCNutrition/
+https://amcnutrition.vercel.app/
