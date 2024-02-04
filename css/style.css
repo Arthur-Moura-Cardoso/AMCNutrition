@@ -728,6 +728,9 @@ footer hr {
     bottom: 4.5em;
     right: -0.5em;
   }
+  footer .footer_content .inscricao_footer .footer_form {
+    left: 0;
+  }
   footer .footer_content .inscricao_footer .footer_form .container_footer-inscricao {
     width: 90vw;
   }
