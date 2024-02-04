@@ -40,11 +40,14 @@ main {
             display: flex;
             gap: 6px;
             flex-direction: column;
-            label {
-                @include label();
-                display: flex;
+            .flex {
                 justify-content: space-between;
-                align-items: center;
+                label {
+                    @include label();
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
                 span {
                     font-weight: 700;
                     font-size: .9em;
@@ -76,8 +79,7 @@ main {
                         }
                     }
                     &:hover {
-                        .text_balloon
-                            {
+                        .text_balloon {
                             position: absolute;
                             top: -135px;
                             left: -40px;
@@ -88,7 +90,6 @@ main {
                             background: $cor-segundaria;
                             border-radius: 10px;
                             font-size: 1em;
-                            
                             &::after{
                                     content: '';
                                     position: absolute;
@@ -104,8 +105,9 @@ main {
                         }
                     }
                 }
-            }
+            } 
             input {
+                font-size: 16px;
                 width: 230px;
                 padding: 4px 8px;
                 border: 1px solid $cor-primaria;
@@ -168,3 +170,44 @@ main {
         }
     }
 }
+
+@media (max-width: 768px) {
+    main {
+        .container {
+            .flex {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .filtro {
+                .flex {
+                    flex-direction: row;
+                    span {
+                        .text_balloon {
+                            left: unset;
+                            right: 60px;
+                        }
+                        &:hover {
+                            .text_balloon {
+                                left: unset;
+                                right: -35px;
+                                text-align: center;
+                                width: 150px;
+
+                                &::after{
+                                        left: unset;
+                                        right: 25px;
+                                    }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .botao {
+                width: 80vw;
+            }
+        }
+    }
+}
+

@@ -90,7 +90,7 @@ tel.addEventListener('focusout', () => {
         mensagem_erro.innerText = "Por favor insira seu telefone"
     }else if (numeroTelefone.length < 14){
         tel.value = ""
-        mensagem_erro.innerText = "Insira um telefone válido (XX)XXXX - XXXX"
+        mensagem_erro.innerText = "Insira um telefone válido (XX)XXXX - XXXXX"
     }else {
         tel.value = numeroTelefone
     }

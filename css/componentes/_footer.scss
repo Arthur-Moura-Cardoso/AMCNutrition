@@ -136,6 +136,10 @@ footer {
                 .container_footer-inscricao {
                     position: relative;
                     width: 30vw;
+                    min-height: 70vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     padding-bottom: 2em;
                     background: $cor-terciaria;
                     border-radius: 50px 0;
@@ -262,6 +266,7 @@ footer {
                     justify-content: center;
                     gap: 12px;
                     height: 100%;
+                    text-align: center;
                     @include fadeIn();
 
                     img {
@@ -287,6 +292,71 @@ footer {
                 filter: blur(0px);
                 width: 100vw;
             }
+        }
+    }
+    hr {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        .footer_content {
+            flex-direction: column;
+            gap: 23px;
+            .logo_footer {
+                flex-direction: column;
+            }
+            hr {
+                display: block;
+                height: 2px;
+                width: 90%;
+                background: $cor-primaria;
+                outline: none;
+                border: none;
+            }
+            .footer_center {
+                .frase_motivacional {
+                    ::before {
+                        bottom: 4.5em;
+                        left: -0.5em;
+                    }
+
+                    ::after {
+                        bottom: 4.5em;
+                        right: -0.5em;
+                    }
+                }
+            }
+
+            .inscricao_footer {
+                .footer_form {
+                    .container_footer-inscricao {
+                        width: 90vw;
+                        .container_footer-form {
+                            h2 {
+                                margin-top: 2.5em;
+                                font-size: 1.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 365px) {
+    .frase_motivacional {
+        ::before {
+            bottom: 4em;
+            left: 0em;
+        }
+
+        ::after {
+            bottom: 4em;
+            right: 0em;
         }
     }
 }

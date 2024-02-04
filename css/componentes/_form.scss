@@ -23,11 +23,25 @@ form {
             font-size: 1.05em;
         }
         input {
+            font-size: 16px;
             width: 20vw;
             padding: 10px 14px;
             border-radius: 10px;
             outline: none;
             border: 2px solid $cor-primaria;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    form {
+        .inputs {
+            grid-template-columns: auto;
+        }
+        .grupo {
+            input {
+                width: 80vw;
+            }
         }
     }
 }

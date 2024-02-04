@@ -8,6 +8,7 @@ table {
     margin: 5vh auto;
     text-align: center;
     @include bordaTabela();
+    overflow: scroll;
     thead {
         tr {
             th { 
@@ -45,3 +46,10 @@ table {
         }
     }
 }
+
+/* @media (max-width: 768px) {
+    table {
+        display: none;
+    }
+}
+ */
