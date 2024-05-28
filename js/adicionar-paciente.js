@@ -1,11 +1,11 @@
 const botao_adicionar = document.querySelector("#buscar-paciente")
 
 const nomes = [
-    "Arthur","Leonardo","Fran","Lucas","Guilherme","Gustavo","Livia","Nicole","Beatriz","Julia","Gabriel","Gabrielly","João","Jefferson","Daniel","Matheus","Sara","Giovanna","Marianna","Ana","Anna","Nicolas","Natanael","Vitor","Leandro","Leonel","Valentina","Sofia","Isadora","Enzo"
+    "Arthur","Gisele","Ashley","Leonardo","Lucas","Guilherme","Gustavo","Livia","Nicole","Beatriz","Julia","Gabriel","Gabrielly","João","Jefferson","Daniel","Matheus","Sara","Giovanna","Marianna","Ana","Anna","Nicolas","Natanael","Vitor","Leandro","Leonel","Valentina","Sofia","Isadora","Enzo"
 ]
 
 const sobrenomes = [
-    "Moura","Cardoso","Alves","Souza","Peres","Maciel","Barreto","Pina","Magalhães","Macedo","Santos","Gomes","Silva","Almeida","Barbosa","Castro","Coelho","Costa","Coutinho","Dias","Garcia","Lopez","Moreira","Nascimento","Oliveira","Pereira","Ramos","Vieira","Santana","Telles"
+    "Moura","Cardoso","Kate","Ledo","Alves","Souza","Peres","Maciel","Barreto","Pina","Magalhães","Santos","Gomes","Silva","Almeida","Barbosa","Castro","Coelho","Costa","Coutinho","Dias","Garcia","Lopez","Moreira","Nascimento","Oliveira","Pereira","Ramos","Vieira","Santana","Telles"
 ]
 
 botao_adicionar.addEventListener('click', ()=> {
